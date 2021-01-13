@@ -24,7 +24,7 @@ class UserManager(BaseUserManager):
 
 
     def create_superuser(self, email, password):
-        user = self.create_superuser(email, password)
+        user = self.create_user(email, password)
         user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)
@@ -60,7 +60,7 @@ class Profile(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    userProfile = models.ForeignKey(
+    userPost = models.ForeignKey(
         settings.AUTH_USER_MODEL, related_name="userPost",
         on_delete=models.CASCADE
     )
