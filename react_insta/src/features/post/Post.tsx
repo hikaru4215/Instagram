@@ -75,7 +75,7 @@ const Post: React.FC<PROPS_POST> = ({
                     <Avatar className={styles.post_avatar} src={prof[0]?.img} />
                     <h3>{prof[0]?.nickName}</h3>
                 </div>
-                <img className={styles.post_img} src={imageUrl} alt="" />
+                <img className={styles.post_image} src={imageUrl} alt="" />
 
                 <h4 className={styles.post_text}>
                     <Checkbox

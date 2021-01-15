@@ -78,7 +78,7 @@ export const fetchAsyncGetProfs = createAsyncThunk(
                 Authorization: `JWT ${localStorage.localJWT}`,
             },
         });
-        return res.data[0];
+        return res.data;
     }
 );
 
